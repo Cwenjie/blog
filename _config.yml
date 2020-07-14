@@ -6,7 +6,7 @@
 title: 文杰的博客
 subtitle: ''
 description: 
-keywords:
+keywords: 
 author: 文杰
 language: zh-CN
 timezone: ''
@@ -96,8 +96,8 @@ ignore:
 theme: fluid
 
 
-Deployment
-# Docs: https://hexo.io/docs/deployment.html
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
   repo: http://github.com/Cwenjie/blog.git

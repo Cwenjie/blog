@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="文杰">
   <meta name="keywords" content="">
-  <title>页面走丢啦~ - 文杰的博客</title>
+  <title>页面走丢啦~ - 文杰的鱼塘</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -46,7 +46,7 @@
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
-       href="/">&nbsp;<strong>文杰的博客</strong>&nbsp;</a>
+       href="/">&nbsp;<strong>文杰的鱼塘</strong>&nbsp;</a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -145,7 +145,7 @@
          style="background: url('https://i.loli.net/2020/07/13/FsobvIpjmYa7TnC.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
-        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.1)">
           <div class="container text-center white-text fadeInUp">
             <span class="h2" id="subtitle">
               
@@ -206,6 +206,29 @@
   
 
   
+    <!-- APlayer 音乐播放器 -->
+    <div id="aplayer"></div>
+    <script defer src="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js" ></script>
+<link  rel="stylesheet" href="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css" />
+<script type="text/javascript">
+  var oldLoadAp = window.onload;
+  window.onload = function () {
+    oldLoadAp && oldLoadAp();
+
+    new APlayer({
+      container: document.getElementById('aplayer'),
+      fixed: true,
+      autoplay: 'false' === 'true',
+      loop: 'all',
+      order: 'random',
+      theme: '#b7daff',
+      preload: 'none',
+      audio: [{"name":"苏幕遮","artist":"张晓棠","url":"/songs/张晓棠 - 苏幕遮.mp3","cover":"/img/cover.jpg"}]
+    });
+  }
+</script>
+
+  
 
   
 
@@ -242,7 +265,26 @@
     
   </div>
 
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+  $(document).ready(function () {
 
+      var int = setInterval(fixCount, 50);
+      var pvcountOffset = 80000;
+      var uvcountOffset = 20000;
+
+      function fixCount() {
+          if (document.getElementById("busuanzi_container_site_pv").style.display != "none") {
+              $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + pvcountOffset);
+              clearInterval(int);
+          }
+          if ($("#busuanzi_container_site_pv").css("display") != "none") {
+              $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + uvcountOffset); // 加上初始数据 
+              clearInterval(int);
+          }
+      }
+  });
+</script>
     
 
     
@@ -286,7 +328,7 @@
       ],
       cursorChar: "💻",
       // cursorChar: <img src="https://i.loli.net/2020/07/13/gbaUy4BlKoPVcvG.png" srcset="/img/loading.gif"/>
-      typeSpeed: 80,
+      typeSpeed: 70,
       loop: false,
     });
     typed.stop();

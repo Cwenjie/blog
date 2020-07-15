@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 文杰的博客
+title: 文杰的鱼塘
 subtitle: ''
 description: 
 keywords: 
@@ -14,7 +14,7 @@ timezone: ''
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://blog.icmore.top
-root: /blog
+root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -102,3 +102,33 @@ deploy:
   type: git
   repo: http://github.com/Cwenjie/blog.git
   branch: master
+
+# minifiler
+all_minifier: true
+html_minifier:
+  enable: true
+  ignore_error: false
+  exclude:
+  
+css_minifier:
+  enable: true
+  exclude: 
+    - '*.min.css'
+
+js_minifier:
+  enable: true
+  mangle: true
+  output:
+  compress:
+  exclude: 
+    - '*.min.js'
+
+image_minifier: 
+  enable: false # 图片不压缩
+  interlaced: false
+  multipass: false
+  optimizationLevel: 2
+  pngquant: false
+  progressive: false
+
+  

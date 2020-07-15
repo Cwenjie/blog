@@ -13,7 +13,7 @@ var date_cursor = 'xxx'
 <div class="list-group">
   <p class="h4"><%= __('postTotal', cat ? cat.posts.length : 0) %></p>
   <hr>
-  <% page.posts.each(function (post) { %>
+  <% site.posts.each(function (post) { %>
     <% if(date(post.date, "YYYY") != date_cursor) { %>
       <% date_cursor = date(post.date, "YYYY") %>
       <p class="h5"><%= date_cursor %></p>

@@ -14,10 +14,10 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
+  <meta name="description" content="安得世间酒干涸，解你此生不快乐">
   <meta name="author" content="文杰">
   <meta name="keywords" content="">
-  <title>文杰的鱼塘</title>
+  <title>文杰的酒馆</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -46,7 +46,7 @@
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
-       href="/">&nbsp;<strong>文杰的鱼塘</strong>&nbsp;</a>
+       href="/">&nbsp;<strong>文杰的酒馆</strong>&nbsp;</a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -130,6 +130,18 @@
             </li>
           
         
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://icmore.top/" target="_blank" rel="noopener">
+                <i class="iconfont icon-th-large"></i>
+                主页
+              </a>
+            </li>
+          
+        
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
@@ -145,7 +157,7 @@
          style="background: url('https://i.loli.net/2020/07/13/yeOrABhPfUFC71E.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
-        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.1)">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0)">
           <div class="container text-center white-text fadeInUp">
             <span class="h2" id="subtitle">
               
@@ -180,21 +192,20 @@
     
     
     <div class="col-12 col-md-12 mx-auto index-info">
-      <a class="index-header" href="/2020/07/15/helloworld/">Hello World</a>
+      <a class="index-header" href="/post/f9eb20ad.html">helloworld</a>
 
-      <a href="/2020/07/15/helloworld/" class="index-excerpt">
+      <a href="/post/f9eb20ad.html" class="index-excerpt">
         
         
           
         
-        <div>Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick</div>
+        <div></div>
       </a>
 
       <div class="index-btm post-metas">
         
           <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>&nbsp;2020-07-15
+            <i class="iconfont icon-date"></i>&nbsp;2020-07-16
           </div>
         
         
@@ -246,65 +257,36 @@ Quick</div>
   
 
   
-    <!-- APlayer 音乐播放器 -->
-    <div id="aplayer"></div>
-    <script defer src="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js" ></script>
-<link  rel="stylesheet" href="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css" />
-<script type="text/javascript">
-  var oldLoadAp = window.onload;
-  window.onload = function () {
-    oldLoadAp && oldLoadAp();
-
-    new APlayer({
-      container: document.getElementById('aplayer'),
-      fixed: true,
-      autoplay: 'false' === 'true',
-      loop: 'all',
-      order: 'random',
-      theme: '#b7daff',
-      preload: 'none',
-      audio: [{"name":"苏幕遮","artist":"张晓棠","url":"/songs/张晓棠 - 苏幕遮.mp3","cover":"/img/cover.jpg"}]
-    });
-  }
-</script>
-
-  
 
   
 
   <footer class="mt-5">
   <div class="text-center py-3">
     <div>
-      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>由强力的Hexo驱动</span></a>
       <i class="iconfont icon-love"></i>
       <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
-        <span>Fluid</span></a>
+        <span>由好看的Fluid驱动</span></a>
+      <i class="iconfont icon-love"></i>
+      <a target="_blank" rel="nofollow noopener">由<s>超厉害的</s>文杰书写</a>
+      <br>
+      <span id="sitetime"></span>
+      <br>
+      <span id="busuanzi_container_site_pv" style='display:none'>
+        <i class="fa fa-heart-o"></i>
+        本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+      </span>
+      <span id="busuanzi_container_site_uv" style='display:none'>
+      人次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+      </span>
     </div>
     
-  <div class="statistics">
-    
-    
 
     
-      
-        <!-- 不蒜子统计PV -->
-        <span id="busuanzi_container_site_pv" style="display: none">
-            总访问量 
-            <span id="busuanzi_value_site_pv"></span>
-             次
-          </span>
-      
-      
-        <!-- 不蒜子统计UV -->
-        <span id="busuanzi_container_site_uv" style="display: none">
-            总访客数 
-            <span id="busuanzi_value_site_uv"></span>
-             人
-          </span>
-      
+
     
   </div>
-
+</footer>
 <!-- 不蒜子计数初始值纠正 -->
 <script>
   $(document).ready(function () {
@@ -325,12 +307,42 @@ Quick</div>
       }
   });
 </script>
-    
 
-    
-  </div>
-</footer>
-
+<script language=javascript>
+  function siteTime() {
+      window.setTimeout("siteTime()", 1000);
+      var seconds = 1000;
+      var minutes = seconds * 60;
+      var hours = minutes * 60;
+      var days = hours * 24;
+      var years = days * 365;
+      var today = new Date();
+      var todayYear = today.getFullYear();
+      var todayMonth = today.getMonth() + 1;
+      var todayDate = today.getDate();
+      var todayHour = today.getHours();
+      var todayMinute = today.getMinutes();
+      var todaySecond = today.getSeconds();
+      /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+      year - 作为date对象的年份，为4位年份值
+      month - 0-11之间的整数，做为date对象的月份
+      day - 1-31之间的整数，做为date对象的天数
+      hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+      minutes - 0-59之间的整数，做为date对象的分钟数
+      seconds - 0-59之间的整数，做为date对象的秒数
+      microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+      var t1 = Date.UTC(2020, 06, 1, 00, 00, 00); //北京时间2018-2-13 00:00:00
+      var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+      var diff = t2 - t1;
+      var diffYears = Math.floor(diff / years);
+      var diffDays = Math.floor((diff / days) - diffYears * 365);
+      var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+      var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+      var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+      document.getElementById("sitetime").innerHTML = "本站已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+  }/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
+  siteTime();
+</script>
 <!-- SCRIPTS -->
 <script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
 <script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>

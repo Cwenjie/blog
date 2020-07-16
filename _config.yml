@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 文杰的鱼塘
+title: 文杰的酒馆
 subtitle: ''
-description: 
+description: 安得世间酒干涸，解你此生不快乐
 keywords: 
 author: 文杰
 language: zh-CN
@@ -15,8 +15,12 @@ timezone: ''
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://blog.icmore.top
 root: /
-permalink: :year/:month/:day/:title/
-permalink_defaults:
+# permalink: :year/:month/:day/:title/
+# permalink_defaults:
+permalink: post/:abbrlink.html
+abbrlink:
+  alg: crc32  # 算法：crc16(default) and crc32
+  rep: hex    # 进制：dec(default) and hex
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
@@ -131,4 +135,3 @@ image_minifier:
   pngquant: false
   progressive: false
 
-  
